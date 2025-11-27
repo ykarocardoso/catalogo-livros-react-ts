@@ -1,0 +1,224 @@
+/* src/App.css */
+
+/* --- 1. Configurações Globais (Crucial para o HTML/BODY) --- */
+html, body {
+    margin: 0;
+    padding: 0; 
+    min-height: 100vh; /* GARANTE QUE OCUPA A ALTURA TOTAL DA TELA */
+    background-color: #f4f7f9;
+    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+
+/* --- 1.5. CONTAINER DE CENTRALIZAÇÃO (Onde a mágica acontece) --- */
+.app-container {
+    display: flex;
+    justify-content: center; /* CENTRO HORIZONTAL */
+    align-items: flex-start; /* Alinha o conteúdo ao topo (para o topo da tela) */
+    padding: 20px; /* Adiciona o espaçamento geral aqui */
+    min-height: 100vh; /* Garante que o container use a altura total */
+}
+
+/* --- 2. Layout Principal --- */
+.book-list-page {
+    max-width: 1200px;
+    width: 100%; /* Garante que ocupe a largura máxima */
+    padding: 20px;
+    background-color: #fff; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.main-title {
+    text-align: center;
+    color: #007bff; 
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+/* --- 3. Botão de Adicionar --- */
+.add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 25px;
+    transition: background-color 0.3s;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+/* --- 4. Grid de Livros (Visualização) --- */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.book-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left: 5px solid #007bff; 
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.3em;
+}
+
+.book-card p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* --- 5. Botões de Ação do Card --- */
+.actions button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.edit-button {
+    background-color: #ffc107; 
+    color: #333;
+}
+
+.edit-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-button {
+    background-color: #dc3545; 
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* --- 6. Estilização do Formulário (Formulário Modal/Overlay) --- */
+
+/* O fundo escuro que cobre a tela */
+.book-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* O container branco do formulário */
+.book-form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.book-form-container h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Estilização dos grupos de formulário (Label + Input) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 1em;
+}
+
+/* Estilização dos botões Salvar/Cancelar */
+.form-actions {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: opacity 0.3s;
+}
+
+.save-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.save-button:hover {
+    opacity: 0.9;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancel-button:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,27 @@
+/* src/index.css */
+
+/* Garante que todos os elementos comecem sem margens ou paddings estranhos */
+* {
+  box-sizing: border-box;
+}
+
+/* Zera margens e paddings dos elementos raiz */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* FORÇA O FLEXBOX NO ELEMENTO ONDE O REACT RENDERIZA */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* LINHAS DE CÓDIGO CRUCIAIS ADICIONADAS */
+  display: flex; 
+  justify-content: center; /* Centraliza o conteúdo (o .app-container) */
+  align-items: flex-start; /* Alinha o conteúdo ao topo */
+}

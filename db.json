@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "id": "ddef",
+      "title": "Cem Anos de Solidão",
+      "author": "Gabriel García Márquez",
+      "year": 1967,
+      "isbn": "978-8501021464"
+    },
+    {
+      "id": "7b1e",
+      "title": "O Apanhador de Sonhos",
+      "author": "Stephen King",
+      "year": 2001,
+      "isbn": "978-8581050989"
+    },
+    {
+      "id": "2070",
+      "title": "Harry Potter e a Pedra Filosofal",
+      "author": "J.K. Rowling",
+      "year": 1997,
+      "isbn": "978-8532510014"
+    },
+    {
+      "id": "227a",
+      "title": "O Pequeno Príncipe",
+      "year": 1943,
+      "author": "Antoine de Saint-Exupéry",
+      "isbn": "978-8578270691"
+    },
+    {
+      "id": "c020",
+      "title": "Sapiens: Uma Breve História da Humanidade",
+      "year": 2011,
+      "author": "Yuval Noah Harari",
+      "isbn": "978-8535925890"
+    },
+    {
+      "id": "8162",
+      "title": "O Diario de Anne Frank",
+      "author": "Anne Frank",
+      "year": 1947,
+      "isbn": "978-93674678438"
+    }
+  ]
+}
